@@ -20,3 +20,11 @@ decimal desconto = cupomDesconto.Trim().Equals("CINEMA10", StringComparison.Ordi
     : 0.00m;
 
 decimal valorFinal = custoBruto - desconto;
+
+bool elegivelSessaoNoturna = quantidadeIngressos > 1 && idadeCliente >= 18;
+
+Console.WriteLine();
+Console.WriteLine($"Cliente: {nomeCliente.ToUpper()}");
+Console.WriteLine($"Valor Bruto: R$ {custoBruto:F2}");
+Console.WriteLine($"Valor Final: R$ {valorFinal:F2}");
+Console.WriteLine($"Elegivel para Sessao Noturna: {elegivelSessaoNoturna}");
